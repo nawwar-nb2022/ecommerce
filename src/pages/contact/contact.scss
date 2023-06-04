@@ -1,0 +1,47 @@
+.contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    form{
+        width: 500px;
+        border-radius: 10px ;
+        background-color: #fefefe;
+        box-shadow: 1px 1px 10px #ddd;
+        .inputGroup{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin: 20px 0;
+            input , textarea{
+                width: 80%;
+                padding: auto;
+                padding: 10px;
+                outline: none;
+                border: none;
+            }
+            input{
+                border-bottom: 1px solid black;
+            }
+            textarea{
+                box-shadow: 2px 0px 10px lightgray;
+                border-radius: 10px;
+            }
+        }
+        .btn{
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        button{
+            text-align: center;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            background-color: darkcyan;
+            color: white;
+            padding: 5px 20px;
+            border-radius : 10px;
+            font-size: 1.4rem;
+        }
+    }
+}

@@ -1,0 +1,140 @@
+@import "../../index.scss";
+.cartItems{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    .cartItem{
+        @include mobile{
+            flex-direction: column;
+            align-items: center;
+        }
+        width: 90%;
+        border: 1px solid gray;
+        display: flex;
+        border-radius:10px;
+        padding: 20px;
+        gap: 20px;
+
+        .imageSection{
+            @include tablet{
+                flex: 1;
+            }
+            width: 200px;
+            img{
+                width: 100%;
+                object-fit: cover;
+                border-radius: 10px;
+                @include tablet{
+                    height: 100%;
+                }
+            }
+        }
+        .informationSectionCart{
+            @include tablet{
+                flex: 2;
+            }
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .topSection{
+                font-weight: 500;
+                font-size: 1.2rem;
+                display: flex;
+                justify-content: space-between;
+            }
+            .desc{
+                font-weight: 200;
+                width: 70%;
+                @include tablet{
+                    width: 90%;
+                }
+            }
+            .payInfo{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                .count{
+                    display: flex;
+                    gap: 20px;
+                    font-size: 1.5rem;
+                    .dec,.inc{
+                        cursor: pointer;
+                    }
+                    .countOrder{
+                        background: lightgray;
+                        padding: 5px 10px;
+                        border-radius: 5px;
+                    }
+                    .dec:active + .countOrder{
+                        background: crimson;
+                        color: white;
+                    }
+                    .incColor{
+                        background: lightgreen;
+                        color: white;
+                    }
+                }
+
+            }
+        }
+    }
+}
+.pay{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    button{
+        width: 20%;
+        padding:10px 20px;
+        border: none;
+        background: lightgreen;
+        border-radius: 10px;
+        font-size: 1.3rem;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+.emptyCart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    .text{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 1.2rem;
+        color: #333;
+        h2{
+            font-weight: 600;
+        }
+        a{
+            text-align: center;
+            font-weight: 500;
+            color: #333;
+            text-decoration: none;
+            cursor: pointer;
+            transition : .5s all ease-out;
+            padding: 10px;
+            border-radius : 10px;
+            &:hover{
+                box-shadow: 1px 1px 5px #646464;
+                color: darkcyan;
+            }
+        }
+    }
+    .lottieAnimation{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        div{
+            width: 50%;
+        }
+    }
+}

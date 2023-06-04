@@ -1,0 +1,36 @@
+@import "../../index.scss";
+.IntroSection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include mobile{
+        flex-direction: column;
+    }
+    .informationIntroSection{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .informationWrapper{
+            width: 50%;
+            @include tablet{
+                width: 90%;
+            }
+            h2{
+                padding-bottom: 20px;
+                font-weight: 500;
+            }
+            p{
+                font-size: .9rem;
+                font-weight: 200;
+            }
+        }
+    }
+    .lottieSection{
+        flex: 1;
+        width: 50%;
+        @include mobile{
+            width: 100%;
+        }
+    }
+}

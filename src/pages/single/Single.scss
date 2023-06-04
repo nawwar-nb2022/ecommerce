@@ -1,0 +1,61 @@
+.single_product{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    .imageSectionSingle{
+        padding-left: 20px;
+        flex: 1;
+        img{
+            width: 100%;
+            border-radius: 10px;
+            &:hover{
+                opacity: .8;
+            }
+        }
+    }
+    .information{
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 20px;
+        a{
+            text-decoration : none;
+            color: #333;
+        }
+        .mian-info{
+            display: flex;
+            gap: 40%;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        .description{
+            width: 60%;
+            font-weight: 300;
+        }
+        .buy{
+            display: flex;
+            gap: 20px;
+            button{
+                padding : 10px;
+                border:none;
+                font-size: 1.2rem;
+                color: white;
+                cursor: pointer;
+                border-radius: 10px;
+                &.buyNow{
+                    background-color: lightgreen;
+                }
+                &.addToCart{
+                    background-color: darkcyan;
+                }
+            }
+        }
+    }
+    .alert{
+        position: absolute;
+        top: 20px;
+        width: 50%;
+    }
+}

@@ -1,0 +1,71 @@
+@import "../../index.scss";
+.catContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .cats{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 1.3rem;
+        width: 80%;
+        @include tablet{
+            width: 100%;
+            flex-wrap: wrap;
+            gap: 1px;
+        }
+        .cat{
+            padding: 10px 20px ;
+            border: 1px solid lightgray;
+            border-radius: 10px;
+            cursor: pointer;
+            opacity: .8;
+            transition: .5s all ease-out;
+            &:hover{
+                opacity: 1;
+                background-color: rgba(211, 211, 211 , .5) ;
+            }
+            @include tablet{
+                flex-basis: 30%;
+                text-align: center;
+            }
+            @include mobile{
+                flex-basis: 40%;
+                margin : 10px 0; 
+            }
+        }
+    }
+}
+.products {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    .product{
+        border: 1px solid #999;
+        border-radius: 10px;
+        margin-top: 10px;
+        padding: 10px;
+        .imageSection{
+            height: 300px;
+            width: 300px;
+            img{
+                height: 100%;
+                width: 100%;
+                border-radius: 10px;
+            }
+        }
+        .info{ 
+            font-family: 'Roboto', sans-serif;;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+        &:hover{
+            box-shadow: 1px 1px 5px rgba($color: #0000, $alpha: .5);
+        }
+    }
+}
