@@ -22,7 +22,8 @@ function App() {
                 <Suspense fallback="loading"><LazyCart/></Suspense>} />
                 <Route path="about" element={<AboutUs/>} />
                 <Route path="contact" element={<Contact/>} />
-                <Route path="payment" element={<LazyBuy/>} />
+                <Route path="payment" element={
+                <Suspense fallback="loading"><LazyBuy/></Suspense>} />
               </Route>
           </Routes>
               <Footer/> 
