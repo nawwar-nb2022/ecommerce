@@ -25,6 +25,7 @@ const Intro = () => {
                     <h2>welcome to our store</h2>
                     <p>
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur placeat vel quam et. Totam omnis porro blanditiis voluptatem nihil. Repudiandae.
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur placeat vel quam et. Totam omnis porro blanditiis voluptatem nihil. Repudiandae.
                     </p>
                 </div>
             </div>

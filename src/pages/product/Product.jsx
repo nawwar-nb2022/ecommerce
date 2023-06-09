@@ -18,10 +18,10 @@ const Product = () => {
         }
     } , [categoryState])
     return (
-        <div>
+        <div className='mainProductContainer'>
             <Intro/>
             <div className="catContainer">
-                <Category cats={dd}/>
+                <Category cats={dd}/> 
             </div>
             <div className="products">
             {productsShow.map((data , rowId)=>{

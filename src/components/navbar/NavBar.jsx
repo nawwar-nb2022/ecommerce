@@ -8,7 +8,7 @@ import "./NavBar.scss"
 const NavBar = () => {
     const [show , setV] = useState()
     const state = useSelector(state => state.state)
-    let len = state.cart.length ;
+    let len = Object.keys(state.cart).length ;
     return (
         <div className="navbar mobile">
             <div className="left_logo">

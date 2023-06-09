@@ -1,5 +1,5 @@
 import { Alert, Rating } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate, useParams } from "react-router"
 import { Link } from "react-router-dom";
@@ -10,25 +10,27 @@ const Single = () => {
     const {id} = useParams();
     const data = products[id]
     const [alert , setAlert] = useState()
-    let ItemId = localStorage.cart ? JSON.parse(localStorage.cart ) : []
-    const dispatch = useDispatch()
     const navigate = useNavigate()
-    const handleAlert =()=>{
-        ItemId.push(id)
 
-        localStorage.setItem("cart" ,JSON.stringify(ItemId))
-        
-        dispatch(CardNotification(ItemId))
+        const dispatch = useDispatch()
+    
+    const handleAlert =()=>{
         setAlert("cart")
         setTimeout(()=>{
             setAlert("")
         },1500)
     }
+
+
     const buyNow = ()=>{
         dispatch(setBuy(data.price))
         navigate("/payment")
     }
+    const [count , setCount]  = useState(1)
 
+    useEffect(()=>{
+        dispatch(CardNotification( {id , count }))
+    },[count , dispatch , id])
     return (
         <div className="single_product">
             <div className="imageSectionSingle">
@@ -48,6 +50,17 @@ const Single = () => {
                         {data.name}
                     </h2>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum, blanditiis iste ullam et sed laudantium eos facilis error nobis quasi?
+                </div>
+                <div className="count">
+                    <div className="dec" onClickCapture={()=>setCount(count-1)}>
+                        -
+                    </div>
+                    <div className="number">
+                        {count}
+                    </div>
+                    <div className="inc" onClickCapture={()=>setCount(count+1)} >
+                        +
+                    </div>
                 </div>
                 <div className="buy">
                     <button className="buyNow" onClick={buyNow}>

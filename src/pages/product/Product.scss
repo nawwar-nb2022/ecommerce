@@ -1,4 +1,10 @@
 @import "../../index.scss";
+.mainProductContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
 .catContainer{
     display: flex;
     align-items: center;
@@ -7,8 +13,10 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+        gap: 20px;
         font-size: 1.3rem;
-        width: 80%;
+        width:70%;
+        margin: 20px 0;
         @include tablet{
             width: 100%;
             flex-wrap: wrap;
@@ -42,14 +50,20 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    width: 90%;
+    
     .product{
         border: 1px solid #999;
         border-radius: 10px;
         margin-top: 10px;
         padding: 10px;
         .imageSection{
-            height: 300px;
-            width: 300px;
+            height: 330px;
+            width: 330px;
+            @include tablet {
+                width: 250px;
+                height: 250px;
+            }
             img{
                 height: 100%;
                 width: 100%;
